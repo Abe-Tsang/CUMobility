@@ -1,0 +1,15 @@
+﻿@{
+    var data = (MainModel)ViewData["Message"];
+}
+
+<h2>Index</h2>
+<h3>@data.ProblemLocation</h3>
+<h3>@data.ProblemKind</h3>
+
+@using (Html.BeginForm("Submit", "Problem", FormMethod.Get))
+{
+    <input type="text" name="PL" id="PL" />
+    <input type="text" name="PK" id="PK" />
+
+    <input type="submit" value="Submit" />
+}

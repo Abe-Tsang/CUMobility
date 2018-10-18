@@ -13,10 +13,16 @@ namespace CUMobility.Controllers
         // GET: Main
         public ActionResult Index()
         {
+            return View();
+        }
+
+        // Main/ProblemReporting
+        public ActionResult ProblemReporting()
+        {
             MainModel mm = new MainModel
             {
                 ProblemLocation = "Fleming",
-                ProblemKind = "Accidents"
+                ProblemKind = "Accident"
             };
             ViewData["Message"] = mm;
             return View();
