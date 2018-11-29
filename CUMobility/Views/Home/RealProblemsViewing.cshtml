@@ -1,0 +1,9 @@
+﻿@model string[]
+<ul>
+    @foreach (var i in Model)
+    {
+        <li>@i</li>
+
+    }
+</ul>
+<input type="button" value="Home" onclick="location.href='@Url.Action("LoggedInIndex", "")'" />
